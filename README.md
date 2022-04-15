@@ -11,6 +11,15 @@ ESP32 is a series of low-cost, low-power system on a chip microcontrollers with 
 
 
 ## 2. Google Assistant
+
+<img src="https://easyelectronicsproject.com/wp-content/uploads/2020/07/home-automation-google-assistant-2.jpg" width="800" height="350"  />
+
+
+Now a days technology grown too much that our life becomes so easier and we are much dependent on them. They are doing a lot of work for us. Let's see an example of how to control an LED with Google Assistant (IoT). You can find the code for the development board [here](https://github.com/CFI-Electronics-Club/Megasession-2.0/blob/main/GoogleAssistant.ino). 
+
+* [Session Slides]()
+* [Session Recoding]()
+
 ## 3. DuckHunt Gaming
 ## 4. Smartwatch
 ## 5. Cricket Shot Identification System
