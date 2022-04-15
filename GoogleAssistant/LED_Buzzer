@@ -3,12 +3,14 @@
 #include <Adafruit_MQTT_Client.h>
 #include <Adafruit_MQTT_FONA.h>
 
-#define Wifi_ssid "Brahms112"
-#define Wifi_pass "abhipramat112"
+#define Wifi_ssid "Write_Your_SSID"
+#define Wifi_pass "Write_your_Password"
+
+
 #define AIO_Server "io.adafruit.com"
 #define AIO_Serverport 1883
-#define AIO_Username "PramatShastri17"
-#define AIO_Key "aio_Seex32oGnZujn6aEwNjhweoljn7I"
+#define AIO_Username "Write_your_Username"
+#define AIO_Key "aio_Seex32oGnZujn6aEwNjhwe****"
 
 int rled_pin = 25;
 int bled_pin = 27;
