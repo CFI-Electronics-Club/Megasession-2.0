@@ -27,6 +27,6 @@ Now a days technology grown too much that our life becomes so easier and we are 
 Duck hunt gaming console is a console where we play the popular duck hunt game using the ESP32, peripheral shield, joystick and OLED display. Through this session, participants were introduced to the working of the OLED display and the joystick, and were able to make this project using those basic principles. The code of the duck hunt game is given [here](https://github.com/CFI-Electronics-Club/Megasession-2.0/blob/main/Duck%20Hunt/Duck_hunt.ino)
 
 * [Session Slides](https://drive.google.com/file/d/1QLY-kuk9tP7zZSARci5TQlc1_Yeir8Ul/view?usp=sharing)
-* [Session Recording]()
+* [Session Recording](https://drive.google.com/file/d/1CWbsEqldqjgcd5fE2LBsA82adYw1BeCd/view?usp=sharing)
 ## 4. Smartwatch
 ## 5. Cricket Shot Identification System
