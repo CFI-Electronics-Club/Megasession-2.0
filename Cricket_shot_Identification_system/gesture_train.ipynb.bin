@@ -1,0 +1,109 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "gesture_train.ipynb",
+      "provenance": [],
+      "collapsed_sections": []
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "NQKaNIGzzaG9"
+      },
+      "outputs": [],
+      "source": [
+        "import numpy as np\n",
+        "from glob import glob       # The glob module finds all the pathnames matching a specified pattern according to the rules\n",
+        "from os.path import basename        # os.path.basename() method in Python is used to get the base name in specified path\n",
+        "\n",
+        "# Formatting dataset\n",
+        "\n",
+        "def load_features(folder):\n",
+        "    dataset = None\n",
+        "    classmap = {}\n",
+        "    for class_idx, filename in enumerate(glob('%s/*.csv' % folder)):\n",
+        "        class_name = basename(filename)[:-4]        # to remove '.csv' from class name\n",
+        "        classmap[class_idx] = class_name            # set key value pairs\n",
+        "        samples = np.loadtxt(filename, dtype=float, delimiter=',')\n",
+        "        labels = np.ones((len(samples), 1)) * class_idx\n",
+        "        samples = np.hstack((samples, labels))      # hstack Stack arrays in sequence horizontally (column wise).\n",
+        "        dataset = samples if dataset is None else np.vstack((dataset, samples))\n",
+        "        # vstack Stack arrays in sequence vertically (row wise).\n",
+        "    return dataset, classmap"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Random Forest Classifier model\n",
+        "from sklearn.ensemble import RandomForestClassifier\n",
+        "\n",
+        "def get_classifier(features):\n",
+        "    X, y = features[:, :-1], features[:, -1]\n",
+        "    return RandomForestClassifier(100, max_depth=20).fit(X, y)"
+      ],
+      "metadata": {
+        "id": "puAn-qOKzilQ"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "pip install micromlgen"
+      ],
+      "metadata": {
+        "id": "f9XOtg_ezlhg"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "The micromlgen package (the package that can port Machine learning classifiers to plain C) supports the following classes:\n",
+        "\n",
+        "* Decision Tree\n",
+        "* Random Forest\n",
+        "* XGBoost\n",
+        "* Gaussian NB\n",
+        "* Support Vector Machines\n",
+        "* Relevance Vector Machines\n",
+        "* SEFR"
+      ],
+      "metadata": {
+        "id": "MxW7UC49zpMK"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "from micromlgen import port\n",
+        "\n",
+        "if __name__ == '__main__':\n",
+        "    features, classmap = load_features('dataset/')          # Make sure all .csv files to train are inside a folder called dataset\n",
+        "    classifier = get_classifier(features)                   # train and fit the model\n",
+        "    c_code = port(classifier, classmap=classmap)            # convert the trained model to c code\n",
+        "    print(c_code)"
+      ],
+      "metadata": {
+        "id": "kZZIl2j30T1h"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
