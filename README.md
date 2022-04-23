@@ -29,4 +29,12 @@ Duck hunt gaming console is a console where we play the popular duck hunt game u
 * [Session Slides](https://drive.google.com/file/d/1QLY-kuk9tP7zZSARci5TQlc1_Yeir8Ul/view?usp=sharing)
 * [Session Recording](https://drive.google.com/file/d/1CWbsEqldqjgcd5fE2LBsA82adYw1BeCd/view?usp=sharing)
 ## 4. Smartwatch
+
+<img src="https://content.instructables.com/ORIG/F7Z/GR9Q/K8WK2ALN/F7ZGR9QK8WK2ALN.jpg?auto=webp" width="600" height="250"/>
+
+     
+Using dev board we are making a smart watch prototype to show time with some functionalities in it along with joystick control and many more. You can find the 
+entire code of the session under the this [page](https://github.com/hplvm/Megasession-2.--day-5).
+
+
 ## 5. Cricket Shot Identification System
