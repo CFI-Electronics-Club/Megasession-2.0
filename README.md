@@ -22,7 +22,7 @@ Now a days technology grown too much that our life becomes so easier and we are 
 
 ## 3. DuckHunt Gaming
 
-<img src="https://play-lh.googleusercontent.com/AVog4ZKe3NYj6w4-zZaqBDaj0JzvSSkfsR_CfPQ_e_bKnCU0j48-LCeDdxI2N2Oiey87" width="600" height="250"/>" 
+<img src="https://play-lh.googleusercontent.com/AVog4ZKe3NYj6w4-zZaqBDaj0JzvSSkfsR_CfPQ_e_bKnCU0j48-LCeDdxI2N2Oiey87" width="600" height="250"/>
 
 Duck hunt gaming console is a console where we play the popular duck hunt game using the ESP32, peripheral shield, joystick and OLED display. Through this session, participants were introduced to the working of the OLED display and the joystick, and were able to make this project using those basic principles. The code of the duck hunt game is given [here](https://github.com/CFI-Electronics-Club/Megasession-2.0/blob/main/Duck%20Hunt/Duck_hunt.ino)
 
@@ -38,3 +38,11 @@ entire code of the session under the this [page](https://github.com/hplvm/Megase
 
 
 ## 5. Cricket Shot Identification System
+
+<img src="https://www.pinclipart.com/picdir/big/181-1815480_cricket-lengths-cricket-batting-shots-tips-clipart.png" width="600" height="250"/>
+
+
+The Cricket Shot Identification System is built using an ML algorithm which helps in predicting the cricket shot that is being played. The dataset is created by getting the values of the accelerometer from the IMU sensor. Through this session, you will learn how to create your own dataset for different cricket shots using an IMU sensor and train an ML model to predict the shot, and deploy it on the microcontroller to test the model. You can find the code and dataset files [here](https://github.com/CFI-Electronics-Club/Megasession-2.0/tree/main/Cricket_shot_Identification_system).
+
+* [Session Slides](https://drive.google.com/file/d/1_jUEpWlo8aT3qPfyQmzeq9QP9sU6zS6h/view?usp=sharing)
+* [Session Recording](https://drive.google.com/file/d/1vFlaILHBKeo-rxbhYtI7Pts3Nig3pycT/view?usp=sharing)
